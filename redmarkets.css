@@ -1,17 +1,37 @@
 /* top logo */
+div.sheet-logo{
+  content: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/FoLlogo.jpg?raw=true);
+  align-items: right;
+}
 div.sheet-main {
-  display: grid;
   width:    650px; /* Defines the width and height of the sheet */
   height:   900px;
   background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/FoLborder.jpg?raw=true);
   background-size: 650px 900px; /* Sets the sheet border image to same size as sheet */
   background-repeat: no-repeat;
+  
 }
-div.sheet-logo{
-  background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/FoLlogo.jpg?raw=true);
-  background-size: 650px 120px;
+div.sheet-mainColumns {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  width:    630px; /* Defines the width and height of the sheet */
+  height:   780px;
+  background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/FoLborder.jpg?raw=true);
+  background-size: 620px 900px; /* Sets the sheet border image to same size as sheet */
   background-repeat: no-repeat;
-  align-items: top;
+}
+div.sheet-topLeftGroup{
+  width:    315px; /* Defines the width and height of the sheet */
+  height:   300px;
+  background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/TopLeftGroupBG.JPG?raw=true);
+  background-repeat: no-repeat;
+}
+div.sheet-twoColTextField{
+    padding-left: 12px;
+    padding-Right: 12px;
+    display: flex;
+    height:30px;
+    align-items: center;
 }
 /* --------- Text ------------- */
 
@@ -21,6 +41,8 @@ span.sheet-bold{
 }
 
 label {
+  font-family: "Lucida Console", Courier, monospace;
+  color: green;
   margin: 5px 0px 5px 0px;
   font-size: 1.25em;
 }
