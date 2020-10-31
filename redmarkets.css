@@ -1,0 +1,84 @@
+/* top logo */
+div.sheet-main {
+  display: grid;
+  width:    650px; /* Defines the width and height of the sheet */
+  height:   900px;
+  background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/FoLborder.jpg?raw=true);
+  background-size: 650px 900px; /* Sets the sheet border image to same size as sheet */
+  background-repeat: no-repeat;
+}
+div.sheet-logo{
+  background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/FoLlogo.jpg?raw=true);
+  background-size: 650px 120px;
+  background-repeat: no-repeat;
+  align-items: top;
+}
+/* --------- Text ------------- */
+
+span.sheet-bold{
+  font-weight: 800;
+  font-size: medium;
+}
+
+label {
+  margin: 5px 0px 5px 0px;
+  font-size: 1.25em;
+}
+
+/* --------- Inputs ------------- */
+
+input[type="text"] {
+  background-color: transparent;
+  border-style: none none solid none;
+  border-color: black;
+}
+
+input[type="number"] {
+  background-color: transparent;
+  border: none;
+}
+
+textarea {
+  background-color: transparent;
+  width: 89%;
+  height: 70%;
+  margin-right: 15px;
+}
+
+input[type="checkbox"].sheet-checkbox {
+  border-style: solid black;
+  border-radius: 0px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="number"]:focus{
+  background-color: #F6CED8;
+}
+
+/* -----Hides up/down buttons on numberfields that don't need them ---*/
+
+input[type=number].sheet-ref::-webkit-inner-spin-button,
+input[type=number].sheet-ref::-webkit-outer-spin-button,
+input[type=number].sheet-txtfield::-webkit-inner-spin-button,
+input[type=number].sheet-txtfield::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number].sheet-ref,
+input[type=number].sheet-txtfield {
+  -moz-appearance: textfield;
+}
+
+/* ------- Buttons ---------- */
+
+button[type="roll"]:not(.sheet-small){
+  color: black;
+  height: 30px;
+  width: 30px;
+  margin-left: 15px;
+}
+
+button[type="roll"]:not(.sheet-small)::before{
+  font-size: 1.4em;
+}
