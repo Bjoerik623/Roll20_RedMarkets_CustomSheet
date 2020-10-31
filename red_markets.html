@@ -19,56 +19,45 @@
 <!-- MAIN STAT SECTION -->
 
   <div class="stats section">
-
-    <div>
-      <button name="roll_init" type="roll" value="&{template:default} {{name=Initiative}} {{Result=[[d20]]}} &{tracker}"><span>Initiative</span></button>
-    </div>
-
     <div class="stat-block flex-center">
-      <label>STRENGTH</label>
+      <label>STR</label>
       <input name="attr_strength" type="number" value="">
       <span name="attr_strength_bonus"></span>
       <button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result=[[d20+(@{strength_bonus})]]}}"></button>
     </div>
 
     <div class="stat-block flex-center">
-      <label>INTELLIGENCE</label>
+      <label>SPD</label>
       <input name="attr_intelligence" type="number" value="">
       <span name="attr_intelligence_bonus"></span>
       <button name="roll_intelligence" type="roll" value="&{template:default} {{name=Intelligence}} {{Result=[[d20+(@{intelligence_bonus})]]}}"></button>
     </div>
 
     <div class="stat-block flex-center">
-      <label>CHARM</label>
+      <label>ADP</label>
       <input name="attr_charm" type="number" value="">
       <span name="attr_charm_bonus"></span>
       <button name="roll_charm" type="roll" value="&{template:default} {{name=Charm}} {{Result=[[d20+(@{charm_bonus})]]}}"></button>
     </div>
 
     <div class="stat-block flex-center">
-      <label>ARCANA</label>
+      <label>INT</label>
       <input name="attr_arcana" type="number" value="">
       <span name="attr_arcana_bonus"></span>
       <button name="roll_arcana" type="roll" value="&{template:default} {{name=Arcana}} {{Result=[[d20+(@{arcana_bonus})]]}}"></button>
     </div>
 
     <div class="stat-block flex-center">
-      <label>GRACE</label>
+      <label>CHA</label>
       <input name="attr_grace" type="number" value="">
       <span name="attr_grace_bonus"></span>
       <button name="roll_grace" type="roll" value="&{template:default} {{name=Grace}} {{Result=[[d20+(@{grace_bonus})]]}}"></button>
     </div>
 
     <div class="stat-block flex-center">
-      <label>DEFENSE</label>
+      <label>WIL</label>
       <input name="attr_defense"       type="number" value="10">
       <input name="attr_defense_bonus" type="number" value="">
-    </div>
-
-    <div class="stat-block flex-center">
-      <label>HIT POINTS</label>
-      <input name="attr_hit_points"     type="number" value="">
-      <input name="attr_hit_points_max" type="number" value="">
     </div>
   </div>
 
