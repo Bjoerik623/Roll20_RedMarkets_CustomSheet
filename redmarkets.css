@@ -12,7 +12,6 @@ div.sheet-topLeftGroup{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 22px 22px 44px 44px 44px;
-  /*border: 3px solid #73AD21;*/
 }
 div.sheet-atrGrpSTR{
   position: relative;
@@ -123,8 +122,19 @@ div.sheet-twoColTextField{
     padding-Right: 12px;
     display: block;
     align-items: center;
-    /*border: 3px solid black;*/
 }
+/* --------- DAMAGE ------------- */
+div.sheet-DamageHead{
+    display:grid;
+    grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
+    position: relative;
+    Top:112px;
+    left: 390px;
+    width: 150px;
+    height:60px;
+    padding:0px;
+}
+
 /* --------- Text ------------- */
 
 span.sheet-bold{
@@ -212,4 +222,95 @@ button[type=roll].sheet-blank-roll-button::before {
     font-family: dicefontd6;
     content: "F"; 
     color: #500000;
+}
+button[type=damage]::before {
+    background-image: none;
+    font-family: Pictos;
+    content: "*"; 
+    color: #000000;
+    font-size:10px;
+}
+
+
+
+
+
+
+.sheet-container {
+    width: 35px;
+    height:35px;
+}
+
+.sheet-container,
+.sheet-child {
+    display: inline-block;
+}
+
+.sheet-child {
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+}
+
+.sheet-child input,
+.sheet-child input + label {
+    display: none;
+    z-index: 1;
+}
+
+.sheet-child:hover {
+    transition-delay: 1.5s;
+    background: gray;
+    position:relative;
+    width: 100px;
+    height: auto;
+    z-index: 1;
+    padding: 5px;
+    transition: all 0.5s ease 0.5s;
+}
+
+.sheet-child:hover > div.sheet-stun {
+    display: none;
+}
+
+.sheet-child:hover input,
+.sheet-child:hover input + label {
+    display: inline;
+}
+
+.sheet-child:hover input + label {
+   margin-right: 50%
+}
+
+.sheet-child:hover label {
+    display: inline-block;
+}
+div.sheet-none {
+    width: 30px;
+    height: 30px;
+    background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/noDamage.JPG?raw=true);
+    background-repeat: no-repeat;
+    display: none;
+    border: 3px solid black;
+}
+div.sheet-stun {
+    width: 30px;
+    height: 30px;
+    background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/stunDamage.JPG?raw=true);
+    background-repeat: no-repeat;
+    display: none;
+    border: 3px solid black;
+}
+div.sheet-kill {
+    width: 30px;
+    height: 30px;
+    background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/killDamage.JPG?raw=true);
+    background-repeat: no-repeat;
+    display: none;
+    border: 3px solid black;
+}
+.sheet-child:not(:hover) input.sheet-select-radio.sheet-none:checked ~ div.sheet-none,
+.sheet-child:not(:hover) input.sheet-select-radio.sheet-stun:checked ~ div.sheet-stun,
+.sheet-child:not(:hover) input.sheet-select-radio.sheet-kill:checked ~ div.sheet-kill {
+    display: block;
 }

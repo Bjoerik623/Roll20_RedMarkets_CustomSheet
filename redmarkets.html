@@ -19,6 +19,7 @@
 	<div class="atrGrpSTR">
 	    <label></label>
 		<input name="attr_strength" type="number" value="0">
+		<span name="attr_strength_bonus"></span>
 	</div>
 	<div class="atrButtonSTR">
 	    <button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result= PLAYER:[[1d10cf<11]] @{strength_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
@@ -26,6 +27,7 @@
 		<div class="atrGrpSPD">
 	    <label></label>
 		<input name="attr_speed" type="number" value="0">
+		<span name="attr_speed_bonus"></span>
 	</div>
 	<div class="atrButtonSPD">
 	    <button name="roll_speed" type="roll" value="&{template:default} {{name=SPEED}} {{Result= PLAYER:[[1d10cf<11]] @{speed_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
@@ -33,6 +35,7 @@
 		<div class="atrGrpADP">
 	    <label></label>
 		<input name="attr_adapt" type="number" value="0">
+		<span name="attr_adapt_bonus"></span>
 	</div>
 	<div class="atrButtonADP">
 	    <button name="roll_adapt" type="roll" value="&{template:default} {{name=ADAPTEBILITY}} {{Result= PLAYER:[[1d10cf<11]] @{adapt_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
@@ -40,6 +43,7 @@
 		<div class="atrGrpINT">
 	    <label></label>
 		<input name="attr_intelligence" type="number" value="0">
+		<span name="attr_intelligence_bonus"></span>
 	</div>
 	<div class="atrButtonINT">
 	    <button name="roll_intelligence" type="roll" value="&{template:default} {{name=INTELLIGENCE}} {{Result= PLAYER:[[1d10cf<11]] @{intelligence_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
@@ -47,15 +51,151 @@
 		<div class="atrGrpCHA">
 	    <label></label>
 		<input name="attr_charisma" type="number" value="0">
+		<span name="attr_charisma_bonus"></span>
 	</div>
 		<div class="atrGrpWIL">
 	    <label></label>
 		<input name="attr_will" type="number" value="0">
+		<span name="attr_will_bonus"></span>
 		<input name="attr_curwill" type="number" value="0">
+		<span name="attr_curwill_bonus"></span>
 	</div>
 	<div class="atrButtonCHA">
 	    <button name="roll_charisma" type="roll" value="&{template:default} {{name=CHARISMA}} {{Result= PLAYER:[[1d10cf<11]] @{charisma_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
 	</div>
+	<div class="DamageHead">
+    <div class="sheet-container">
+        <div class="sheet-child">
+            <input type="radio" name="attr_radioH1" class="sheet-select-radio sheet-none" value="0" checked="true" />
+            <label>none</label>
+            <input type="radio" name="attr_radioH1" class="sheet-select-radio sheet-stun" value="1" />
+            <label>stun</label>
+            <input type="radio" name="attr_radioH1" class="sheet-select-radio sheet-kill" value="2" />
+            <label>kill</label>
+            <div class="sheet-none"></div>
+            <div class="sheet-stun"></div>
+            <div class="sheet-kill"></div>
+        </div>
+    </div>
+    <div class="sheet-container">
+        <div class="sheet-child">
+            <input type="radio" name="attr_radioH2" class="sheet-select-radio sheet-none" value="0" checked="true" />
+            <label>none</label>
+            <input type="radio" name="attr_radioH2" class="sheet-select-radio sheet-stun" value="1" />
+            <label>stun</label>
+            <input type="radio" name="attr_radioH2" class="sheet-select-radio sheet-kill" value="2" />
+            <label>kill</label>
+            <div class="sheet-none"></div>
+            <div class="sheet-stun"></div>
+            <div class="sheet-kill"></div>
+        </div>
+    </div>
+    <div class="sheet-container">
+        <div class="sheet-child">
+            <input type="radio" name="attr_radioH3" class="sheet-select-radio sheet-none" value="0" checked="true" />
+            <label>none</label>
+            <input type="radio" name="attr_radioH3" class="sheet-select-radio sheet-stun" value="1" />
+            <label>stun</label>
+            <input type="radio" name="attr_radioH3" class="sheet-select-radio sheet-kill" value="2" />
+            <label>kill</label>
+            <div class="sheet-none"></div>
+            <div class="sheet-stun"></div>
+            <div class="sheet-kill"></div>
+        </div>
+    </div>
+    <div class="sheet-container">
+        <div class="sheet-child">
+            <input type="radio" name="attr_radioH4" class="sheet-select-radio sheet-none" value="0" checked="true" />
+            <label>none</label>
+            <input type="radio" name="attr_radioH4" class="sheet-select-radio sheet-stun" value="1" />
+            <label>stun</label>
+            <input type="radio" name="attr_radioH4" class="sheet-select-radio sheet-kill" value="2" />
+            <label>kill</label>
+            <div class="sheet-none"></div>
+            <div class="sheet-stun"></div>
+            <div class="sheet-kill"></div>
+        </div>
+    </div>
+    <div class="sheet-container">
+        <div class="sheet-child">
+            <input type="radio" name="attr_radioH5" class="sheet-select-radio sheet-none" value="0" checked="true" />
+            <label>none</label>
+            <input type="radio" name="attr_radioH5" class="sheet-select-radio sheet-stun" value="1" />
+            <label>stun</label>
+            <input type="radio" name="attr_radioH5" class="sheet-select-radio sheet-kill" value="2" />
+            <label>kill</label>
+            <div class="sheet-none"></div>
+            <div class="sheet-stun"></div>
+            <div class="sheet-kill"></div>
+        </div>
+    </div>
+    <div class="sheet-container">
+        <div class="sheet-child">
+            <input type="radio" name="attr_radioH6" class="sheet-select-radio sheet-none" value="0" checked="true" />
+            <label>none</label>
+            <input type="radio" name="attr_radioH6" class="sheet-select-radio sheet-stun" value="1" />
+            <label>stun</label>
+            <input type="radio" name="attr_radioH6" class="sheet-select-radio sheet-kill" value="2" />
+            <label>kill</label>
+            <div class="sheet-none"></div>
+            <div class="sheet-stun"></div>
+            <div class="sheet-kill"></div>
+        </div>
+    </div>
+    <div class="sheet-container">
+        <div class="sheet-child">
+            <input type="radio" name="attr_radioH7" class="sheet-select-radio sheet-none" value="0" checked="true" />
+            <label>none</label>
+            <input type="radio" name="attr_radioH7" class="sheet-select-radio sheet-stun" value="1" />
+            <label>stun</label>
+            <input type="radio" name="attr_radioH7" class="sheet-select-radio sheet-kill" value="2" />
+            <label>kill</label>
+            <div class="sheet-none"></div>
+            <div class="sheet-stun"></div>
+            <div class="sheet-kill"></div>
+        </div>
+    </div>
+    <div class="sheet-container">
+        <div class="sheet-child">
+            <input type="radio" name="attr_radioH8" class="sheet-select-radio sheet-none" value="0" checked="true" />
+            <label>none</label>
+            <input type="radio" name="attr_radioH8" class="sheet-select-radio sheet-stun" value="1" />
+            <label>stun</label>
+            <input type="radio" name="attr_radioH8" class="sheet-select-radio sheet-kill" value="2" />
+            <label>kill</label>
+            <div class="sheet-none"></div>
+            <div class="sheet-stun"></div>
+            <div class="sheet-kill"></div>
+        </div>
+    </div>
+    <div class="sheet-container">
+        <div class="sheet-child">
+            <input type="radio" name="attr_radioH9" class="sheet-select-radio sheet-none" value="0" checked="true" />
+            <label>none</label>
+            <input type="radio" name="attr_radioH9" class="sheet-select-radio sheet-stun" value="1" />
+            <label>stun</label>
+            <input type="radio" name="attr_radioH9" class="sheet-select-radio sheet-kill" value="2" />
+            <label>kill</label>
+            <div class="sheet-none"></div>
+            <div class="sheet-stun"></div>
+            <div class="sheet-kill"></div>
+        </div>
+    </div>
+    <div class="sheet-container">
+        <div class="sheet-child">
+            <input type="radio" name="attr_radioH10" class="sheet-select-radio sheet-none" value="0" checked="true" />
+            <label>none</label>
+            <input type="radio" name="attr_radioH10" class="sheet-select-radio sheet-stun" value="1" />
+            <label>stun</label>
+            <input type="radio" name="attr_radioH10" class="sheet-select-radio sheet-kill" value="2" />
+            <label>kill</label>
+            <div class="sheet-none"></div>
+            <div class="sheet-stun"></div>
+            <div class="sheet-kill"></div>
+        </div>
+    </div>
+    </div>
+
 </div>
 
 
@@ -72,12 +212,12 @@
 
 
 <script type="text/worker">
-
-const int = score => parseInt(score, 10) || 0;
-
 // <button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result=[[d20+(@{strength_bonus})]]}}"></button>
 // according to the table on page 5 of the Rulebook.
 // If the Base stat is less than 1, the sheet sets the bonus to "-2"
+on("change:strength", function() {
+
+});
 
 const stats = ["strength", "speed", "adapt", "intelligence", "charisma"];
 stats.forEach(stat => {
