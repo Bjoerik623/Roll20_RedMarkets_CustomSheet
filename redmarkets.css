@@ -1,37 +1,129 @@
-/* top logo */
-div.sheet-logo{
-  content: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/FoLlogo.jpg?raw=true);
-  align-items: right;
-}
 div.sheet-main {
-  width:    650px; /* Defines the width and height of the sheet */
-  height:   900px;
-  background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/FoLborder.jpg?raw=true);
-  background-size: 650px 900px; /* Sets the sheet border image to same size as sheet */
+  background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/Page1.jpg?raw=true);
   background-repeat: no-repeat;
-  
-}
-div.sheet-mainColumns {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  width:    630px; /* Defines the width and height of the sheet */
-  height:   780px;
-  background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/FoLborder.jpg?raw=true);
-  background-size: 620px 900px; /* Sets the sheet border image to same size as sheet */
-  background-repeat: no-repeat;
+  height:1080px;
 }
 div.sheet-topLeftGroup{
-  width:    315px; /* Defines the width and height of the sheet */
-  height:   300px;
-  background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/TopLeftGroupBG.JPG?raw=true);
-  background-repeat: no-repeat;
+  position: relative;
+  Top:130px;
+  left: 125px;
+  width: 250px;
+  height: 175px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 22px 22px 44px 44px 44px;
+  /*border: 3px solid #73AD21;*/
+}
+div.sheet-atrGrpSTR{
+  position: relative;
+  Top:178px;
+  left: 55px;
+  width: 25px;
+  height: 25px;
+  vertical-align:middle;
+  display:box;
+}
+div.sheet-atrButtonSTR{
+  position: relative;
+  Top:220px;
+  left: 170px;
+  width: 25px;
+  height: 25px;
+  vertical-align:middle;
+  display:box;
+  zoom:0.7;
+}
+div.sheet-atrGrpSPD{
+  position: relative;
+  Top:241px;
+  left: 55px;
+  width: 25px;
+  height: 25px;
+  vertical-align:middle;
+  display:box;
+}
+div.sheet-atrButtonSPD{
+  position: relative;
+  Top:312px;
+  left: 170px;
+  width: 25px;
+  height: 25px;
+  vertical-align:middle;
+  display:box;
+  zoom:0.7;
+}
+div.sheet-atrGrpADP{
+  position: relative;
+  Top:285px;
+  left: 55px;
+  width: 25px;
+  height: 25px;
+  vertical-align:middle;
+  display:box;
+}
+div.sheet-atrButtonADP{
+  position: relative;
+  Top:375px;
+  left: 170px;
+  width: 25px;
+  height: 25px;
+  vertical-align:middle;
+  display:box;
+  zoom:0.7;
+}
+div.sheet-atrGrpINT{
+  position: relative;
+  Top:330px;
+  left: 55px;
+  width: 25px;
+  height: 25px;
+  vertical-align:middle;
+  display:box;
+}
+div.sheet-atrButtonINT{
+  position: relative;
+  Top:440px;
+  left: 170px;
+  width: 25px;
+  height: 25px;
+  vertical-align:middle;
+  display:box;
+  zoom:0.7;
+}
+div.sheet-atrGrpCHA{
+  position: relative;
+  Top:412px;
+  left: 55px;
+  width: 25px;
+  height: 25px;
+  vertical-align:middle;
+  display:box;
+}
+div.sheet-atrButtonCHA{
+  position: relative;
+  Top:490px;
+  left: 170px;
+  width: 25px;
+  height: 25px;
+  vertical-align:middle;
+  display:box;
+  zoom:0.7;
+}
+div.sheet-atrGrpWIL{
+  position: relative;
+  Top:482px;
+  left: 55px;
+  width: 165px;
+  height: 45px;
+  vertical-align:middle;
+  display:inline-block;
 }
 div.sheet-twoColTextField{
     padding-left: 12px;
     padding-Right: 12px;
-    display: flex;
-    height:30px;
+    display: block;
     align-items: center;
+    /*border: 3px solid black;*/
 }
 /* --------- Text ------------- */
 
@@ -39,10 +131,15 @@ span.sheet-bold{
   font-weight: 800;
   font-size: medium;
 }
-
+text {
+  font-family: "Lucida Console", Courier, monospace;
+  color: black;
+  margin: 5px 0px 5px 0px;
+  font-size: 1.25em;
+}
 label {
   font-family: "Lucida Console", Courier, monospace;
-  color: green;
+  color: black;
   margin: 5px 0px 5px 0px;
   font-size: 1.25em;
 }
@@ -51,20 +148,36 @@ label {
 
 input[type="text"] {
   background-color: transparent;
-  border-style: none none solid none;
+  font-family: "Lucida Console", Courier, monospace;
+  font-weight:800;
+  border-style: none none none none;
+  color:black;
   border-color: black;
 }
-
+input[type="numberAtr"] {
+  background-color: transparent;
+  font-family: "Lucida Console", Courier, monospace;
+  font-weight:800;
+  border-style: none none none none;
+  color:black;
+  border-color: black;
+  font-size: 1.4em;
+}
 input[type="number"] {
   background-color: transparent;
-  border: none;
+  font-family: "Lucida Console", Courier, monospace;
+  font-weight:800;
+  border-style: none none none none;
+  color:black;
+  border-color: black;
+    font-size: 1.4em;
+
 }
 
 textarea {
   background-color: transparent;
-  width: 89%;
-  height: 70%;
-  margin-right: 15px;
+  width: 100%;
+  height: 100%;
 }
 
 input[type="checkbox"].sheet-checkbox {
@@ -93,14 +206,10 @@ input[type=number].sheet-txtfield {
 }
 
 /* ------- Buttons ---------- */
-
-button[type="roll"]:not(.sheet-small){
-  color: black;
-  height: 30px;
-  width: 30px;
-  margin-left: 15px;
-}
-
-button[type="roll"]:not(.sheet-small)::before{
-  font-size: 1.4em;
+button[type=roll].sheet-blank-roll-button::before {
+    background-image: none;
+    background-color: red; /* Green */
+    font-family: dicefontd6;
+    content: "F"; 
+    color: #500000;
 }

@@ -1,35 +1,108 @@
 <div class="main">
-	  <div class="logo"></div>
+    <div class= "topLeftGroup">
+        <div class="twoColTextField">
+        <input name="attr_taker_name" Type="text" value="...">
+        </div>
+          <div class="twoColTextField">
+        <input name="attr_crew_name" Type="text" value="...">
+        </div>
+        <div class="twoColTextField">
+        <input name="attr_soft_spot" Type="text" value="...">
+        </div>
+        <div class="twoColTextField">
+        <input name="attr_weak_spot" Type="text" value="...">
+        </div>
+        <div class="twoColTextField">
+        <input name="attr_tough_spot" Type="text" value="...">
+        </div>
+    </div>
+	<div class="atrGrpSTR">
+	    <label></label>
+		<input name="attr_strength" type="number" value="0">
+	</div>
+	<div class="atrButtonSTR">
+	    <button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result= PLAYER:[[1d10cf<11]] @{strength_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+	</div>
+		<div class="atrGrpSPD">
+	    <label></label>
+		<input name="attr_speed" type="number" value="0">
+	</div>
+	<div class="atrButtonSPD">
+	    <button name="roll_speed" type="roll" value="&{template:default} {{name=SPEED}} {{Result= PLAYER:[[1d10cf<11]] @{speed_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+	</div>
+		<div class="atrGrpADP">
+	    <label></label>
+		<input name="attr_adapt" type="number" value="0">
+	</div>
+	<div class="atrButtonADP">
+	    <button name="roll_adapt" type="roll" value="&{template:default} {{name=ADAPTEBILITY}} {{Result= PLAYER:[[1d10cf<11]] @{adapt_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+	</div>
+		<div class="atrGrpINT">
+	    <label></label>
+		<input name="attr_intelligence" type="number" value="0">
+	</div>
+	<div class="atrButtonINT">
+	    <button name="roll_intelligence" type="roll" value="&{template:default} {{name=INTELLIGENCE}} {{Result= PLAYER:[[1d10cf<11]] @{intelligence_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+	</div>
+		<div class="atrGrpCHA">
+	    <label></label>
+		<input name="attr_charisma" type="number" value="0">
+	</div>
+		<div class="atrGrpWIL">
+	    <label></label>
+		<input name="attr_will" type="number" value="0">
+		<input name="attr_curwill" type="number" value="0">
+	</div>
+	<div class="atrButtonCHA">
+	    <button name="roll_charisma" type="roll" value="&{template:default} {{name=CHARISMA}} {{Result= PLAYER:[[1d10cf<11]] @{charisma_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+	</div>
 </div>
 
 
 
 
 
+<input name="attr_strength_bonus" type="hidden" value="0">
+<input name="attr_speed_bonus" type="hidden" value="0">
+<input name="attr_adapt_bonus" type="hidden" value="0">
+<input name="attr_intelligence_bonus" type="hidden" value="0">
+<input name="attr_charisma_bonus" type="hidden" value="0">
+<input name="attr_will_bonus" type="hidden" value="0">
+<input name="attr_curwill_bonus" type="hidden" value="0">
+
 
 <script type="text/worker">
 
 const int = score => parseInt(score, 10) || 0;
 
-// Auto-calculates & updates 'Stat Bonus' based on changes to corresponding 'Base Stat',
+// <button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result=[[d20+(@{strength_bonus})]]}}"></button>
 // according to the table on page 5 of the Rulebook.
 // If the Base stat is less than 1, the sheet sets the bonus to "-2"
 
-const stats = ["strength", "intelligence", "charm", "arcana", "grace"];
+const stats = ["strength", "speed", "adapt", "intelligence", "charisma"];
 stats.forEach(stat => {
     on(`change:${stat}`, () => {
         getAttrs([stat], values => {
             const stat_base = int(values[stat]);
             console.log(stat_base);
             let stat_bonus = 0;
-            if (stat_base >= 17) stat_bonus = "+4";
-            else if (stat_base >= 16) stat_bonus = "+3";
-            else if (stat_base >= 13) stat_bonus = "+2";
-            else if (stat_base >= 9) stat_bonus = "+1";
-            else if (stat_base >= 7) stat_bonus = "0";
-            else if (stat_base >= 5) stat_bonus = "-1";
-            else if (stat_base >= 1) stat_bonus = "-2";
-            else stat_bonus = "-2";
+			stat_bonus = "stat_base";
+            if (stat_base == 1) stat_bonus = "+1";
+            else if (stat_base == 2) stat_bonus = "+2";
+            else if (stat_base == 3) stat_bonus = "+3";
+            else if (stat_base == 4) stat_bonus = "+4";
+			else if (stat_base == 5) stat_bonus = "+5";
+            else if (stat_base == 6) stat_bonus = "+6";
+			else if (stat_base == 7) stat_bonus = "+7";
+            else if (stat_base == 8) stat_bonus = "+8";
+			else if (stat_base == 9) stat_bonus = "+9";
+            else if (stat_base == 10) stat_bonus = "+10";
+			else if (stat_base == 11) stat_bonus = "+11";
+			else if (stat_base == 12) stat_bonus = "+12";
+			else if (stat_base == 13) stat_bonus = "+13";
+			else if (stat_base == 14) stat_bonus = "+14";
+			else if (stat_base == 15) stat_bonus = "+15";
+            else stat_bonus = "+0";
             
             setAttrs({
                 [`${stat}_bonus`]: stat_bonus
