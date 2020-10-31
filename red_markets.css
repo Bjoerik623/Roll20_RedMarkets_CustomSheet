@@ -12,7 +12,7 @@ span.sheet-bold{
 
 label {
   margin: 5px 0px 5px 0px;
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 
@@ -110,10 +110,10 @@ so that they can be positioned in the grid easily,
  while also providing a human-readable overview. */
 div.sheet-main {
   display: grid;
-  grid-template-columns: 3.5fr 3.5fr;
+  grid-template-columns: 2fr 2fr;
   grid-template-rows: 2fr 0.6fr 2.3fr 0.7fr 3fr 0.7fr 1fr 2fr;
-  grid-template-areas:"logo       name"
-                      "logo       bio"
+  grid-template-areas:"name       logo"
+                      "name       bio"
                       "stats      bio"
                       "stats      gold"
                       "stats      load"
@@ -138,7 +138,7 @@ div.sheet-logo{
   background-image: url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/images/FoLlogo.jpg?raw=true);
   background-size: 295px 180px;
   background-repeat: no-repeat;
-  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 15px;
 }
 
