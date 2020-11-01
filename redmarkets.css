@@ -129,12 +129,61 @@ div.sheet-DamageHead{
     grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
     position: relative;
     Top:112px;
-    left: 390px;
-    width: 150px;
+    left: 387px;
+    width: 60px;
     height:60px;
     padding:0px;
 }
-
+div.sheet-DamageLarm{
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    position: relative;
+    Top:136px;
+    left: 386px;
+    width: 60px;
+    height:60px;
+    padding:0px;
+}
+div.sheet-DamageRarm{
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    position: relative;
+    Top:77px;
+    left: 710px;
+    width: 60px;
+    height:60px;
+    padding:0px;
+}
+div.sheet-DamageLLeg{
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    position: relative;
+    Top:236px;
+    left: 436px;
+    width: 60px;
+    height:60px;
+    padding:0px;
+}
+div.sheet-DamageRLeg{
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    position: relative;
+    Top:175px;
+    left: 660px;
+    width: 60px;
+    height:60px;
+    padding:0px;
+}
+div.sheet-DamageTorso{
+    display:grid;
+    grid-template-columns: 4fr 4fr 4fr 4fr;
+    position: relative;
+    Top:-60px;
+    left: 513px;
+    width: 60px;
+    height:60px;
+    padding:0px;
+}
 /* --------- Text ------------- */
 
 span.sheet-bold{
@@ -266,7 +315,8 @@ button[type=damage]::before {
     height: auto;
     z-index: 1;
     padding: 5px;
-    transition: all 0.5s ease 0.5s;
+    transition: all 0.5s;
+    
 }
 
 .sheet-child:hover > div.sheet-stun {
