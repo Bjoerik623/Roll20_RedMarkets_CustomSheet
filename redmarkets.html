@@ -19,31 +19,27 @@
 	<div class="atrGrpSTR">
 	    <label></label>
 		<input name="attr_strength" type="number" value="0">
-		<span name="attr_strength_bonus"></span>
 	</div>
 	<div class="atrButtonSTR">
 	    <button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result= PLAYER:[[1d10cf<11]] @{strength_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
 	</div>
-		<div class="atrGrpSPD">
+	<div class="atrGrpSPD">
 	    <label></label>
 		<input name="attr_speed" type="number" value="0">
-		<span name="attr_speed_bonus"></span>
 	</div>
 	<div class="atrButtonSPD">
 	    <button name="roll_speed" type="roll" value="&{template:default} {{name=SPEED}} {{Result= PLAYER:[[1d10cf<11]] @{speed_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
 	</div>
-		<div class="atrGrpADP">
+	<div class="atrGrpADP">
 	    <label></label>
 		<input name="attr_adapt" type="number" value="0">
-		<span name="attr_adapt_bonus"></span>
 	</div>
 	<div class="atrButtonADP">
-	    <button name="roll_adapt" type="roll" value="&{template:default} {{name=ADAPTEBILITY}} {{Result= PLAYER:[[1d10cf<11]] @{adapt_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+	    <button name="roll_adapt" type="roll" value="&{template:default} {{name=ADAPTABILITY}} {{Result= PLAYER:[[1d10cf<11]] @{adapt_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
 	</div>
 		<div class="atrGrpINT">
 	    <label></label>
 		<input name="attr_intelligence" type="number" value="0">
-		<span name="attr_intelligence_bonus"></span>
 	</div>
 	<div class="atrButtonINT">
 	    <button name="roll_intelligence" type="roll" value="&{template:default} {{name=INTELLIGENCE}} {{Result= PLAYER:[[1d10cf<11]] @{intelligence_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
@@ -51,679 +47,676 @@
 		<div class="atrGrpCHA">
 	    <label></label>
 		<input name="attr_charisma" type="number" value="0">
-		<span name="attr_charisma_bonus"></span>
 	</div>
 		<div class="atrGrpWIL">
 	    <label></label>
 		<input name="attr_will" type="number" value="0">
-		<span name="attr_will_bonus"></span>
 		<input name="attr_curwill" type="number" value="0">
-		<span name="attr_curwill_bonus"></span>
 	</div>
 	<div class="atrButtonCHA">
 	    <button name="roll_charisma" type="roll" value="&{template:default} {{name=CHARISMA}} {{Result= PLAYER:[[1d10cf<11]] @{charisma_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
 	</div>
-	<div class="DamageHead">
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioH1" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioH1" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioH1" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
+<div class="DamageHead">
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioH1" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioH1" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioH1" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioH2" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioH2" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioH2" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioH3" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioH3" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioH3" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioH4" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioH4" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioH4" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioH5" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioH5" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioH5" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioH6" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioH6" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioH6" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioH7" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioH7" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioH7" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioH8" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioH8" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioH8" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioH9" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioH9" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioH9" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioH10" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioH10" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioH10" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
     </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioH2" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioH2" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioH2" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
+<div class="DamageLarm">
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLA1" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLA1" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLA1" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLA2" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLA2" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLA2" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLA3" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLA3" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLA3" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLA4" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLA4" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLA4" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLA5" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLA5" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLA5" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLA6" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLA6" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLA6" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLA7" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLA7" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLA7" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLA8" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLA8" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLA8" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLA9" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLA9" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLA9" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLA10" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLA10" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLA10" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
     </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioH3" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioH3" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioH3" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
+<div class="DamageRarm">
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRA1" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRA1" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRA1" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRA2" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRA2" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRA2" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRA3" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRA3" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRA3" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRA4" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRA4" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRA4" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRA5" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRA5" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRA5" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRA6" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRA6" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRA6" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRA7" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRA7" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRA7" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRA8" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRA8" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRA8" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRA9" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRA9" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRA9" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRA10" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRA10" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRA10" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
     </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioH4" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioH4" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioH4" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
+<div class="DamageLLeg">
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLL1" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLL1" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLL1" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLL2" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLL2" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLL2" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLL3" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLL3" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLL3" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLL4" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLL4" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLL4" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLL5" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLL5" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLL5" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLL6" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLL6" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLL6" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLL7" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLL7" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLL7" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLL8" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLL8" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLL8" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLL9" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLL9" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLL9" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioLL10" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioLL10" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioLL10" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
     </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioH5" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioH5" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioH5" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
+<div class="DamageRLeg">
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRL1" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRL1" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRL1" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRL2" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRL2" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRL2" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRL3" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRL3" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRL3" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRL4" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRL4" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRL4" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRL5" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRL5" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRL5" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRL6" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRL6" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRL6" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRL7" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRL7" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRL7" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRL8" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRL8" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRL8" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRL9" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRL9" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRL9" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
+		<div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioRL10" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioRL10" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioRL10" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
+		</div>
     </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioH6" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioH6" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioH6" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioH7" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioH7" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioH7" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioH8" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioH8" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioH8" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioH9" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioH9" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioH9" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioH10" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioH10" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioH10" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    </div>
-	<div class="DamageLarm">
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLA1" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLA1" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLA1" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLA2" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLA2" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLA2" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLA3" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLA3" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLA3" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLA4" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLA4" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLA4" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLA5" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLA5" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLA5" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLA6" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLA6" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLA6" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLA7" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLA7" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLA7" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLA8" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLA8" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLA8" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLA9" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLA9" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLA9" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLA10" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLA10" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLA10" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    </div>
-    <div class="DamageRarm">
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRA1" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRA1" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRA1" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRA2" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRA2" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRA2" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRA3" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRA3" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRA3" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRA4" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRA4" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRA4" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRA5" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRA5" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRA5" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRA6" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRA6" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRA6" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRA7" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRA7" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRA7" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRA8" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRA8" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRA8" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRA9" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRA9" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRA9" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRA10" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRA10" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRA10" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    </div>
-    <div class="DamageLLeg">
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLL1" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLL1" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLL1" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLL2" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLL2" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLL2" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLL3" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLL3" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLL3" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLL4" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLL4" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLL4" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLL5" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLL5" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLL5" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLL6" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLL6" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLL6" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLL7" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLL7" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLL7" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLL8" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLL8" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLL8" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLL9" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLL9" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLL9" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioLL10" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioLL10" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioLL10" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    </div>
-    <div class="DamageRLeg">
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRL1" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRL1" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRL1" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRL2" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRL2" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRL2" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRL3" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRL3" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRL3" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRL4" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRL4" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRL4" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRL5" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRL5" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRL5" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRL6" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRL6" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRL6" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRL7" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRL7" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRL7" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRL8" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRL8" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRL8" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRL9" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRL9" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRL9" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioRL10" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioRL10" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioRL10" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
-    </div>
-    </div>
-            <div class="DamageTorso">
+<div class="DamageTorso">
     <div class="sheet-container">
         <div class="sheet-child">
             <input type="radio" name="attr_radioTorso1" class="sheet-select-radio sheet-none" value="0" checked="true" />
@@ -853,21 +846,21 @@
             <div class="sheet-stun"></div>
             <div class="sheet-kill"></div>
         </div>
-    </div>
-        <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioTorso11" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioTorso11" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioTorso11" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
+	</div>
+    <div class="sheet-container">
+		<div class="sheet-child">
+			<input type="radio" name="attr_radioTorso11" class="sheet-select-radio sheet-none" value="0" checked="true" />
+			<label>none</label>
+			<input type="radio" name="attr_radioTorso11" class="sheet-select-radio sheet-stun" value="1" />
+			<label>stun</label>
+			<input type="radio" name="attr_radioTorso11" class="sheet-select-radio sheet-kill" value="2" />
+			<label>kill</label>
+			<div class="sheet-none"></div>
+			<div class="sheet-stun"></div>
+			<div class="sheet-kill"></div>
         </div>
     </div>
-        <div class="sheet-container">
+    <div class="sheet-container">
         <div class="sheet-child">
             <input type="radio" name="attr_radioTorso12" class="sheet-select-radio sheet-none" value="0" checked="true" />
             <label>none</label>
@@ -880,20 +873,20 @@
             <div class="sheet-kill"></div>
         </div>
     </div>
-        <div class="sheet-container">
-        <div class="sheet-child">
-            <input type="radio" name="attr_radioTorso13" class="sheet-select-radio sheet-none" value="0" checked="true" />
-            <label>none</label>
-            <input type="radio" name="attr_radioTorso13" class="sheet-select-radio sheet-stun" value="1" />
-            <label>stun</label>
-            <input type="radio" name="attr_radioTorso13" class="sheet-select-radio sheet-kill" value="2" />
-            <label>kill</label>
-            <div class="sheet-none"></div>
-            <div class="sheet-stun"></div>
-            <div class="sheet-kill"></div>
-        </div>
+    <div class="sheet-container">
+			<div class="sheet-child">
+				<input type="radio" name="attr_radioTorso13" class="sheet-select-radio sheet-none" value="0" checked="true" />
+				<label>none</label>
+				<input type="radio" name="attr_radioTorso13" class="sheet-select-radio sheet-stun" value="1" />
+				<label>stun</label>
+				<input type="radio" name="attr_radioTorso13" class="sheet-select-radio sheet-kill" value="2" />
+				<label>kill</label>
+				<div class="sheet-none"></div>
+				<div class="sheet-stun"></div>
+				<div class="sheet-kill"></div>
+			</div>
     </div>
-        <div class="sheet-container">
+    <div class="sheet-container">
         <div class="sheet-child">
             <input type="radio" name="attr_radioTorso14" class="sheet-select-radio sheet-none" value="0" checked="true" />
             <label>none</label>
@@ -906,7 +899,7 @@
             <div class="sheet-kill"></div>
         </div>
     </div>
-        <div class="sheet-container">
+    <div class="sheet-container">
         <div class="sheet-child">
             <input type="radio" name="attr_radioTorso15" class="sheet-select-radio sheet-none" value="0" checked="true" />
             <label>none</label>
@@ -919,7 +912,7 @@
             <div class="sheet-kill"></div>
         </div>
     </div>
-        <div class="sheet-container">
+    <div class="sheet-container">
         <div class="sheet-child">
             <input type="radio" name="attr_radioTorso16" class="sheet-select-radio sheet-none" value="0" checked="true" />
             <label>none</label>
@@ -932,7 +925,7 @@
             <div class="sheet-kill"></div>
         </div>
     </div>
-        <div class="sheet-container">
+    <div class="sheet-container">
         <div class="sheet-child">
             <input type="radio" name="attr_radioTorso17" class="sheet-select-radio sheet-none" value="0" checked="true" />
             <label>none</label>
@@ -945,7 +938,7 @@
             <div class="sheet-kill"></div>
         </div>
     </div>
-        <div class="sheet-container">
+    <div class="sheet-container">
         <div class="sheet-child">
             <input type="radio" name="attr_radioTorso18" class="sheet-select-radio sheet-none" value="0" checked="true" />
             <label>none</label>
@@ -958,7 +951,7 @@
             <div class="sheet-kill"></div>
         </div>
     </div>
-        <div class="sheet-container">
+    <div class="sheet-container">
         <div class="sheet-child">
             <input type="radio" name="attr_radioTorso19" class="sheet-select-radio sheet-none" value="0" checked="true" />
             <label>none</label>
@@ -971,7 +964,7 @@
             <div class="sheet-kill"></div>
         </div>
     </div>
-        <div class="sheet-container">
+    <div class="sheet-container">
         <div class="sheet-child">
             <input type="radio" name="attr_radioTorso20" class="sheet-select-radio sheet-none" value="0" checked="true" />
             <label>none</label>
@@ -984,12 +977,232 @@
             <div class="sheet-kill"></div>
         </div>
     </div>
-    </div>
 </div>
-
-
-
-
+<div class="Skills">
+		<div class="skillGrp">
+	    	<input name="attr_unarmed" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_unarmed" type="roll" value="&{template:default} {{name=UNARMED}} {{Result= PLAYER:[[1d10cf<11]] @{unarmed_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_unarmed_spec1" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_unarmed_spec1" type="roll" value="&{template:default} {{name=UNARMED_SPEC1}} {{Result= PLAYER:[[1d10cf<11]] @{unarmed_spec1_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_melee" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_melee" type="roll" value="&{template:default} {{name=MELEE}} {{Result= PLAYER:[[1d10cf<11]] @{melee_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_melee_spec1" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_melee_spec1" type="roll" value="&{template:default} {{name=MELEE_SPEC1}} {{Result= PLAYER:[[1d10cf<11]] @{melee_spec1_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_melee_spec2" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_melee_spec2" type="roll" value="&{template:default} {{name=MELEE_SPEC2}} {{Result= PLAYER:[[1d10cf<11]] @{melee_spec2_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_resistance" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_resistance" type="roll" value="&{template:default} {{name=RESISTANCE}} {{Result= PLAYER:[[1d10cf<11]] @{resistance_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+</div>
+<div class="Skills2">
+		<div class="skillGrp">
+	    	<input name="attr_shoot" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_shoot" type="roll" value="&{template:default} {{name=SHOOT}} {{Result= PLAYER:[[1d10cf<11]] @{shoot_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_shoot_spec1" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_shoot_spec1" type="roll" value="&{template:default} {{name=SHOOT_SPEC1}} {{Result= PLAYER:[[1d10cf<11]] @{shoot_spec1_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_shoot_spec2" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_shoot_spec2" type="roll" value="&{template:default} {{name=SHOOT_SPEC2}} {{Result= PLAYER:[[1d10cf<11]] @{shoot_spec2_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_stealth" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_stealth" type="roll" value="&{template:default} {{name=STEALTH}} {{Result= PLAYER:[[1d10cf<11]] @{stealth_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_athletics" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_athletics" type="roll" value="&{template:default} {{name=ATHLETICS}} {{Result= PLAYER:[[1d10cf<11]] @{athletics_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+</div>
+<div class="Skills3">
+		<div class="skillGrp">
+	    	<input name="attr_awareness" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_awareness" type="roll" value="&{template:default} {{name=AWARENESS}} {{Result= PLAYER:[[1d10cf<11]] @{awareness_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_selfcontrol" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_selfcontrol" type="roll" value="&{template:default} {{name=SELF_CONTROL}} {{Result= PLAYER:[[1d10cf<11]] @{selfcontrol_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_scavenging" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_scavenging" type="roll" value="&{template:default} {{name=SCAVENGING}} {{Result= PLAYER:[[1d10cf<11]] @{scavenging_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_drive" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_drive" type="roll" value="&{template:default} {{name=DRIVE}} {{Result= PLAYER:[[1d10cf<11]] @{drive_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_criminality" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_criminality" type="roll" value="&{template:default} {{name=CRIMINALITY}} {{Result= PLAYER:[[1d10cf<11]] @{criminality_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+</div>
+<div class="Skills4">
+		<div class="skillGrp">
+	    	<input name="attr_foresight" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_foresight" type="roll" value="&{template:default} {{name=FORESIGHT}} {{Result= PLAYER:[[1d10cf<11]] @{foresight_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_research" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_research" type="roll" value="&{template:default} {{name=RESEARCH}} {{Result= PLAYER:[[1d10cf<11]] @{research_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_mechanics" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_mechanics" type="roll" value="&{template:default} {{name=MECHANICS}} {{Result= PLAYER:[[1d10cf<11]] @{mechanics_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_firstaid" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_firstaid" type="roll" value="&{template:default} {{name=FIRSTAID}} {{Result= PLAYER:[[1d10cf<11]] @{firstaid_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_profession" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_profession" type="roll" value="&{template:default} {{name=PROFESSION}} {{Result= PLAYER:[[1d10cf<11]] @{profession_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+</div>
+<div class="Skills5">
+		<div class="skillGrp">
+	    	<input name="attr_networking" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_networking" type="roll" value="&{template:default} {{name=NETWORKING}} {{Result= PLAYER:[[1d10cf<11]] @{networking_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_persuasion" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_persuation" type="roll" value="&{template:default} {{name=PERSUASION}} {{Result= PLAYER:[[1d10cf<11]] @{persuation_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_sensitivity" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_sensitivity" type="roll" value="&{template:default} {{name=SENSITIVITY}} {{Result= PLAYER:[[1d10cf<11]] @{sensitivity_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_deception" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_deception" type="roll" value="&{template:default} {{name=DECEPTION}} {{Result= PLAYER:[[1d10cf<11]] @{deception_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_intimidation" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_intimidation" type="roll" value="&{template:default} {{name=INTIMIDATION}} {{Result= PLAYER:[[1d10cf<11]] @{intimidation_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+		<div class="skillGrp">
+	    	<input name="attr_leadership" type="number" value="0">
+		</div>
+		<div class="skillButton">
+			<button name="roll_leadership" type="roll" value="&{template:default} {{name=LEADERSHIP}} {{Result= PLAYER:[[1d10cf<11]] @{leadership_bonus} MARKET:[[d10]]}}" class="blank-roll-button"></button>
+		</div>
+</div>
+    <div class="Threats">
+        <div class="ThreatColumn1">
+            <input name = "attr_TB1" type="checkbox" value="0">
+            <input name = "attr_TB2" type="checkbox" value="0">
+            <input name = "attr_TB3" type="checkbox" value="0">
+            <input name = "attr_TB4" type="checkbox" value="0">
+            <input name = "attr_TB5" type="checkbox" value="0">
+            <input name = "attr_TB6" type="checkbox" value="0">
+            <input name = "attr_TB7" type="checkbox" value="0">
+            <input name = "attr_TB8" type="checkbox" value="0">
+            <input name = "attr_TB9" type="checkbox" value="0">
+            <input name = "attr_TB10" type="checkbox" value="0">
+            <input name = "attr_TB11" type="checkbox" value="0">
+            <input name = "attr_TB12" type="checkbox" value="0">
+            <input name = "attr_TB13" type="checkbox" value="0">
+            <input name = "attr_TB14" type="checkbox" value="0">
+            <input name = "attr_TB15" type="checkbox" value="0">
+        </div>
+                <div class="ThreatColumn2">
+            <input name = "attr_TB16" type="checkbox" value="0">
+            <input name = "attr_TB17" type="checkbox" value="0">
+            <input name = "attr_TB18" type="checkbox" value="0">
+            <input name = "attr_TB19" type="checkbox" value="0">
+            <input name = "attr_TB20" type="checkbox" value="0">
+            <input name = "attr_TB21" type="checkbox" value="0">
+            <input name = "attr_TB22" type="checkbox" value="0">
+            <input name = "attr_TB23" type="checkbox" value="0">
+            <input name = "attr_TB24" type="checkbox" value="0">
+            <input name = "attr_TB25" type="checkbox" value="0">
+            <input name = "attr_TB26" type="checkbox" value="0">
+            <input name = "attr_TB27" type="checkbox" value="0">
+            <input name = "attr_TB28" type="checkbox" value="0">
+            <input name = "attr_TB29" type="checkbox" value="0">
+            <input name = "attr_TB30" type="checkbox" value="0">
+        </div>
+                <div class="ThreatColumn3">
+            <input name = "attr_TB31" type="checkbox" value="0">
+            <input name = "attr_TB32" type="checkbox" value="1">
+            <input name = "attr_TB33" type="checkbox" value="2">
+            <input name = "attr_TB34" type="checkbox" value="3">
+            <input name = "attr_TB35" type="checkbox" value="4">
+            <input name = "attr_TB36" type="checkbox" value="5">
+            <input name = "attr_TB37" type="checkbox" value="6">
+            <input name = "attr_TB38" type="checkbox" value="7">
+            <input name = "attr_TB39" type="checkbox" value="8">
+            <input name = "attr_TB40" type="checkbox" value="9">
+            <input name = "attr_TB41" type="checkbox" value="10">
+            <input name = "attr_TB42" type="checkbox" value="11">
+            <input name = "attr_TB43" type="checkbox" value="12">
+            <input name = "attr_TB44" type="checkbox" value="13">
+            <input name = "attr_TB45" type="checkbox" value="14">
+        </div>
+    </div>
 
 <input name="attr_strength_bonus" type="hidden" value="0">
 <input name="attr_speed_bonus" type="hidden" value="0">
@@ -998,17 +1211,44 @@
 <input name="attr_charisma_bonus" type="hidden" value="0">
 <input name="attr_will_bonus" type="hidden" value="0">
 <input name="attr_curwill_bonus" type="hidden" value="0">
+<input name="attr_unarmed_bonus" type="hidden" value="0">
+<input name="attr_unarmed_spec1_bonus" type="hidden" value="0">
+<input name="attr_melee_bonus" type="hidden" value="0">
+<input name="attr_melee_spec1_bonus" type="hidden" value="0">
+<input name="attr_melee_spec2_bonus" type="hidden" value="0">
+<input name="attr_resistance_bonus" type="hidden" value="0">
+<input name="attr_shoot_bonus" type="hidden" value="0">
+<input name="attr_shoot_spec1_bonus" type="hidden" value="0">
+<input name="attr_shoot_spec2_bonus" type="hidden" value="0">
+<input name="attr_stealth_bonus" type="hidden" value="0">
+<input name="attr_athletics_bonus" type="hidden" value="0">
+<input name="attr_awareness_bonus" type="hidden" value="0">
+<input name="attr_selfcontrol_bonus" type="hidden" value="0">
+<input name="attr_scavenging_bonus" type="hidden" value="0">
+<input name="attr_drive_bonus" type="hidden" value="0">
+<input name="attr_criminality_bonus" type="hidden" value="0">
 
+<input name="attr_foresight_bonus" type="hidden" value="0">
+<input name="attr_research_bonus" type="hidden" value="0">
+<input name="attr_mechanics_bonus" type="hidden" value="0">
+<input name="attr_firstaid_bonus" type="hidden" value="0">
+<input name="attr_profession_bonus" type="hidden" value="0">
 
+<input name="attr_networking_bonus" type="hidden" value="0">
+<input name="attr_persuation_bonus" type="hidden" value="0">
+<input name="attr_sensitivity_bonus" type="hidden" value="0">
+<input name="attr_deception_bonus" type="hidden" value="0">
+<input name="attr_intimidation_bonus" type="hidden" value="0">
+<input name="attr_leadership_bonus" type="hidden" value="0">
 <script type="text/worker">
-// <button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result=[[d20+(@{strength_bonus})]]}}"></button>
+
+const int = score => parseInt(score, 10) || 0;
+
+// Auto-calculates & updates 'Stat Bonus' based on changes to corresponding 'Base Stat',
 // according to the table on page 5 of the Rulebook.
 // If the Base stat is less than 1, the sheet sets the bonus to "-2"
-on("change:strength", function() {
 
-});
-
-const stats = ["strength", "speed", "adapt", "intelligence", "charisma"];
+const stats = ["strength", "speed", "adapt", "intelligence", "charisma","unarmed","unarmed_spec1","melee","melee_spec1","melee_spec2","resistance","shoot","shoot_spec1","shoot_spec2","stealth","athletics","awareness","selfcontrol","scavenging","drive","criminality","foresight","research","mechanics","firstaid","profession","networking","persuation","sensitivity","deception","intimidation","leadership"];
 stats.forEach(stat => {
     on(`change:${stat}`, () => {
         getAttrs([stat], values => {
@@ -1032,7 +1272,6 @@ stats.forEach(stat => {
 			else if (stat_base == 14) stat_bonus = "+14";
 			else if (stat_base == 15) stat_bonus = "+15";
             else stat_bonus = "+0";
-            
             setAttrs({
                 [`${stat}_bonus`]: stat_bonus
             });

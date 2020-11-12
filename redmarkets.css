@@ -13,6 +13,51 @@ div.sheet-topLeftGroup{
   grid-template-columns: 1fr;
   grid-template-rows: 22px 22px 44px 44px 44px;
 }
+div.sheet-Threats{
+  position: relative;
+  Top:178px;
+  left: 55px;
+  width: 25px;
+  height: 25px;
+  vertical-align:middle;
+  display:box;
+}
+div.sheet-ThreatColumn1{
+  position: relative;
+  Top:-792px;
+  left: 673px;
+  width: 22px;
+  height: 375px;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
+  grid-template-rows: 11px 11px 11px 11px 11px;
+  zoom:0.7;
+}
+div.sheet-ThreatColumn2{
+  position: relative;
+  Top:-1167px;
+  left: 790px;
+  width: 22px;
+  height: 375px;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
+  grid-template-rows: 11px 11px 11px 11px 11px;
+  zoom:0.7;
+}
+div.sheet-ThreatColumn3{
+  position: relative;
+  Top:-1542px;
+  left: 910px;
+  width: 22px;
+  height: 375px;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
+  grid-template-rows: 11px 11px 11px 11px 11px;
+  zoom:0.7;
+}
 div.sheet-atrGrpSTR{
   position: relative;
   Top:178px;
@@ -202,7 +247,69 @@ label {
   margin: 5px 0px 5px 0px;
   font-size: 1.25em;
 }
-
+/* ----------Skills--------------*/
+div.sheet-skillGrp{
+    float: left;
+    
+}
+div.sheet-skillButton{
+    float: right;
+}
+div.sheet-Skills{
+    position: relative;
+    Top:-670px;
+    left: 450px;
+    width: 95px;
+    height: 15px;
+    zoom:0.7;
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    padding:0px;
+}
+div.sheet-Skills2{
+    position: relative;
+    Top:-525px;
+    left: 450px;
+    width: 95px;
+    height: 15px;
+    zoom:0.7;
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    padding:0px;
+}
+div.sheet-Skills3{
+    position: relative;
+    Top:-411px;
+    left: 450px;
+    width: 95px;
+    height: 15px;
+    zoom:0.7;
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    padding:0px;
+}
+div.sheet-Skills4{
+    position: relative;
+    Top:-291px;
+    left: 450px;
+    width: 95px;
+    height: 15px;
+    zoom:0.7;
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    padding:0px;
+}
+div.sheet-Skills5{
+    position: relative;
+    Top:-128px;
+    left: 450px;
+    width: 95px;
+    height: 15px;
+    zoom:0.7;
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    padding:0px;
+}
 /* --------- Inputs ------------- */
 
 input[type="text"] {
@@ -232,7 +339,6 @@ input[type="number"] {
     font-size: 1.4em;
 
 }
-
 textarea {
   background-color: transparent;
   width: 100%;
@@ -240,8 +346,9 @@ textarea {
 }
 
 input[type="checkbox"].sheet-checkbox {
-  border-style: solid black;
-  border-radius: 0px;
+	background:url(https://github.com/Bjoerik623/Roll20_RedMarkets_CustomSheet/blob/master/killDamage.JPG?raw=true)
+	border-style: solid black;
+	border-radius: 0px;
 }
 
 textarea:focus,
