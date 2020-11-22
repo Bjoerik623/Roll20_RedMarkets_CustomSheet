@@ -13,6 +13,16 @@ div.sheet-topLeftGroup{
   grid-template-columns: 1fr;
   grid-template-rows: 22px 22px 44px 44px 44px;
 }
+div.sheet-topRightGroup{
+  position: relative;
+  Top:-730px;
+  left: 400px;
+  width: 250px;
+  height: 175px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 26px 26px 26px 26px 54px 26px 26px 26px 26px 26px;
+}
 div.sheet-Threats{
   position: relative;
   Top:178px;
@@ -21,6 +31,16 @@ div.sheet-Threats{
   height: 25px;
   vertical-align:middle;
   display:box;
+}
+div.sheet-RationsColumn{
+  position: relative;
+  Top:-122px;
+  left: 282px;
+  width: 133px;
+  height: 375px;
+  display: grid;
+  grid-template-columns: 0fr 0fr 0fr 0fr 1fr 0fr 0fr 0fr 0fr 0fr;
+  zoom:0.9;
 }
 div.sheet-ThreatColumn1{
   position: relative;
